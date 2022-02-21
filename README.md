@@ -1,68 +1,134 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Freebird
 
-## Available Scripts
+<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-In the project directory, you can run:
+![GitHub status](https://img.shields.io/github/checks-status/Sala33/FreebirdTech/82f0cc49f3e86f97cd259c4dec2189954a98df1f)
+![Discord Chat](https://img.shields.io/discord/785957787594915851)
+![Size](https://img.shields.io/github/repo-size/Sala33/FreebirdTech)
+![License](https://img.shields.io/github/license/Sala33/FreebirdTech)
 
-### `npm start`
+>Ferramenta Open Source para fomentar empresas, ecossistemas, organizações e associações da Indústria Criativa. Cada usuário tem liberdade para executar, acessar, modificar e desenvolver o código fonte para ser implementado em ecossistemas criativos.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Implementações
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Implementação em ReactJS, Charka UI, React-Query e Firebase.
 
-### `npm test`
+### Ajustes e melhorias
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Roadmap:
 
-### `npm run build`
+- [x] Arquitetura MVC em Blazor
+- [x] Back end .NetCore
+- [x] Back end NoSQL - Implementado no Firebase, extensível para qualquer opção. 
+- [x] Modificação para MicroServiços
+- [x] Habilitação da API em .NetCore
+- [X] Habilitação de plugins de Front-End em React
+- [ ] Explicação do sistema de plugins para facilitar a customização
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Pré-requisitos
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+* NodeJS Instalado
+* NPM configurado
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## 🚀 Instalando o Freebird
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para instalar o Freebird, siga estas etapas:
 
-### `npm run eject`
+### Maps API
+* Primeiro obtenha uma chave da API grátis do [Google Maps](https://developers.google.com/maps/documentation)
+* Crie um arquivo chamado apenas `.env`.env no diretório raiz.
+* Coloque o seguinte conteúdo:
+```
+# .env file
+#
+# Add environment-specific variables on new lines in the form of NAME=VALUE
+# 
+REACT_APP_API_GOOGLE_API=GOOGLEAPI
+```
+* Modifique a chave GOOGLEAPI para utilizar a chave obtida pelo google
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Firebase
+* Use o serviço de database de sua preferência, recomendamos o serviço [Firebase](https://firebase.google.com/docs/web/setup?hl=pt-br) pela facilidade de uso.
+* Vá até o arquivo utils/firebase.js e encontre o objeto `firebaseConfig`
+* Siga o [Guia](https://firebase.google.com/docs/web/setup?hl=pt-br) para a habilitação de um projeto no Firebase. Substitua o firebaseConfig pelo fornecido durante o seguinte [passo](https://firebase.google.com/docs/web/learn-more#config-object).
+* Abra o command prompt na pasta raiz do projeto e rode o comando `npm install`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Publicação.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* O freebird-api se utiliza da tecnologia serverless, não é necessário qualquer server para roda-lo. Localmente é necessário algum servidor como o NodeJS para funcionar devido à políticas de segurança de browser.
+* Não é necessário um server para rodar o projeto, ou o backend, após configurado de acordo com os passos acima ele já está pronto para a publicação.
+* A forma mais fácil de publicar é subir o projeto pra um repositório do github e seguir os passos do serviço [Vercel](https://vercel.com/guides/deploying-react-with-vercel)
+* Em minutos você pode ter um site próprio funcionando.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ☕ Usando o Freebird
 
-## Learn More
+Caso esteja usando o Firebase, nenhuma configuração extra é necessária:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Abra um command prompt na pasta raiz do projeto.
+* `npm start` incia um servidor de desenvolvimento. 
+* Os componentes para edição estão na pasta `Components`.
+* Assim que possível disponibilizaremos um guia para a fácil edição utilizando plugins.
+* Caso queira utilizar outro tipo de database, a pasta `hooks` possui os hooks utilizados para buscar informações da database.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📫 Contribuindo para o Freebird
+<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+Para contribuir com o Freebird, entre no Discord e siga estas etapas:
 
-### Code Splitting
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+5. Crie a solicitação de pull.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-### Analyzing the Bundle Size
+## 🤝 Colaboradores
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-### Making a Progressive Web App
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/c0nundrum">
+        <img src="https://avatars.githubusercontent.com/u/7014553?s=400&u=065c83fe069588dff1cbf06aa54690f50fda7e2c&v=4" width="100px;" alt="Foto do Danilo Ribeiro no GitHub"/><br>
+        <sub>
+          <b>Danilo Ribeiro</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/enirya">
+        <img src="https://avatars.githubusercontent.com/u/24363588?v=4" width="100px;" alt="Foto da Tayrine"/><br>
+        <sub>
+          <b>Tayrine Lopes</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fabricciocanhete">
+        <img src="https://avatars.githubusercontent.com/u/82179914?v=4" width="100px;" alt="Foto do Fabriccio"/><br>
+        <sub>
+          <b>Fabriccio Canhete</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/guscooke">
+        <img src="https://avatars.githubusercontent.com/u/54864329?v=4" width="100px;" alt="Foto do Gustavo"/><br>
+        <sub>
+          <b>Gustavo Cooke</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Agradecimentos
 
-### Advanced Configuration
+<img src="Readme/regua.png" alt="logos">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## 📝 Licença
 
-### Deployment
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[⬆ Voltar ao topo](#freebird)<br>
