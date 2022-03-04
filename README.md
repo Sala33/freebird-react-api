@@ -115,6 +115,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
+## Database Schema
+
+<img src="Readme/ModelDatabase-API.png" alt="logos">
+
 ## Agradecimentos
 
 <img src="Readme/regua.png" alt="logos">
